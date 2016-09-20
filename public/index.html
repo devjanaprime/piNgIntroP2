@@ -10,8 +10,9 @@
     <h1>Node Express ANgular Example</h1>
     <div ng-controller='poeDameron'>
       What song is horrible?<input type="text" ng-model='badSong'>
+      by <input type="text" ng-model='badArtist'>
       <p>
-        {{ badSong }} is a bad song (according to your opinions)
+        {{ badSong }} by {{ badArtist }} is a bad song (according to your opinions)
       </p>
       <button ng-click='addSong()'>Add Song</button>
     </div>
