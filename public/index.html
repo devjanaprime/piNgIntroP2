@@ -9,7 +9,11 @@
   <body ng-app='myApp'>
     <h1>Node Express ANgular Example</h1>
     <div ng-controller='poeDameron'>
-      working???
+      What song is horrible?<input type="text" ng-model='badSong'>
+      <p>
+        {{ badSong }} is a bad song (according to your opinions)
+      </p>
+      <button ng-click='addSong()'>Add Song</button>
     </div>
   </body>
 </html>
