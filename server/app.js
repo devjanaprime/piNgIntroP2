@@ -3,8 +3,8 @@ var app = express();
 var path = require( 'path' );
 var bodyParser = require ( 'body-parser' );
 var urlencodedParser = bodyParser.urlencoded( { extended: true } );
+var bpJason = bodyParser.json();
 var port = process.env.PORT || 3208;
-app.use( bodyParser.json() );
 //spin up server
 app.listen( port, function(){
   console.log( 'server up on', port );
@@ -17,7 +17,7 @@ app.get( '/', function( req, res ){
 }); // end base url
 
 // test post route
-app.post( '/testPost', urlencodedParser, function( req, res ){
+app.post( '/testPost', urlencodedParser, bpJason, function( req, res ){
   console.log( 'in testPost' );
 
   console.log( 'req.body:', req.body );
