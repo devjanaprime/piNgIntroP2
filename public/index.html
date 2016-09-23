@@ -15,6 +15,9 @@
         {{ badSong }} by {{ badArtist }} is a bad song (according to your opinions)
       </p>
       <button ng-click='addSong()'>Add Song</button>
+      <p ng-repeat='crappySong in allSongs'>
+        {{ crappySong.title }} by "{{ crappySong.artist }}" is JUUUUNK
+      </p>
     </div>
   </body>
 </html>
